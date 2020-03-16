@@ -3,9 +3,13 @@ import java.util.HashMap;
 public class main {
 
     public static void main(String[] args) {
-
-	System.out.println(hasOneToOneMapping(args[0], args[1]));
-		
+	try {
+	    System.out.println(hasOneToOneMapping(args[0], args[1]));
+	}
+	catch (ArrayIndexOutOfBoundsException e) {
+	    // if args[0] and args[1] not entered into command line, print false
+	    System.out.println(false);
+	}
     }
 
     public static boolean hasOneToOneMapping(String s1, String s2) {
